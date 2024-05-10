@@ -22,10 +22,10 @@ Thanks for visiting my GitHub account!
 
 ## Required Software (Download)
 
-- VS Code, Download - ->https://code.visualstudio.com/download
-- XAMPP ,Download- -> https://www.apachefriends.org/download.html
-- Composer ,Download (Composer-Setup.exe)- -> https://getcomposer.org/download/
-- Nodejs ,Download - -> https://nodejs.org/en/download
+- VS Code, Download ->https://code.visualstudio.com/download
+- XAMPP ,Download -> https://www.apachefriends.org/download.html
+- Composer ,Download (Composer-Setup.exe) -> https://getcomposer.org/download/
+- Nodejs ,Download -> https://nodejs.org/en/download
 
 ## Laravel Roadmap
 
@@ -40,9 +40,9 @@ Thanks for visiting my GitHub account!
 
 ```cmd
 composer create-project laravel/laravel projectName
+
 or,
 composer global require laravel/installer
-
 laravel new projectName
 ```
 
@@ -61,8 +61,8 @@ DB_PASSWORD=
 
 - For Send Mail
 
-  - Create a Mailtrap account using path - -> https://mailtrap.io/
-  - Get the username & password from Mailtrap account using path- ->https://mailtrap.io/inboxes/2087677/settings
+  - Create a Mailtrap account using path -> https://mailtrap.io/
+  - Get the username & password from Mailtrap account using path ->https://mailtrap.io/inboxes/2087677/settings
   - Set up .env file as-
 
   ```cmd
@@ -84,7 +84,7 @@ php artisan migrate
 
 - Note: If it's not working correctly then following the s
 
-  - Manually, Create the desired database in the path- -> `http://localhost/phpmyadmin/`
+  - Manually, Create the desired database in the path -> `http://localhost/phpmyadmin/`
   - Or Create database using cmd as-
 
     - Set up the Environment variabel `C:\xampp\mysql\bin`
@@ -108,7 +108,7 @@ Step-3: **For Run Project**
 - Start the Xampp server
 - Run command in the root directory `php artisan serve`
 - Run command (Another CMD) in the root directory `npm run dev` (Optional)
-- Visit path - -> http://127.0.0.1:8000/
+- Visit path -> http://127.0.0.1:8000/
 
 [See-more](https://laravel.com/docs/)
 
@@ -239,8 +239,8 @@ composer create-project laravel/laravel project-name
     - => Code: Route::get( '/', function () { return view( 'welcome' ); } );
       - Route::get( 'url/{id,name}', [ControllerName::class, 'functionName'] ); (Using controller and (id, name) is passing value by url ).
       - Route::resource( 'url', ControllerName::class ); (Resource automatically call function).
-      - Route::get( 'url/{id,name}', [ControllerName::class, 'functionName'] )- ->name('folder.fileName');(For Name Route)
-      - Route::prefix('prefixText')- ->controller(ControllerName::class)- ->group(function(){Route::get('url','functionName')});(For prefix and Grouping Route)
+      - Route::get( 'url/{id,name}', [ControllerName::class, 'functionName'] ) ->name('folder.fileName');(For Name Route)
+      - Route::prefix('prefixText') ->controller(ControllerName::class) ->group(function(){Route::get('url','functionName')});(For prefix and Grouping Route)
     - => Method: get/post(for form submit)/PUT(For Update)/PATCH/DELETE(For Delete).
     - => Command: `php artisan route:list`
 
@@ -254,12 +254,20 @@ composer create-project laravel/laravel project-name
 ```php
  <h3>This code place in the component file.</h3>
  <x-fileName></x-fileName>(For display)
- - -> **Option -02** (default component with value passing)
- <h3>{{ $slot }}</h3> This code place in the component file.
- <x-fileName></x-fileName>.(For display)
- - -> **Option -03** (Name componet with value passing)
- <h3>{{ $componentName }}</h3> This code place in the component file.
- <x-fileName:componentName></x-fileName>.(For display)
+```
+
+- -> **Option -02** (default component with value passing)
+
+```php
+<h3>{{ $slot }}</h3> This code place in the component file.
+<x-fileName></x-fileName>.(For display)
+```
+
+- -> **Option -03** (Name componet with value passing)
+
+```php
+<h3>{{ $componentName }}</h3> This code place in the component file.
+<x-fileName:componentName></x-fileName>.(For display)
 
 ```
 
@@ -302,7 +310,7 @@ composer create-project laravel/laravel project-name
 
 ```php
   (i) php artisan tinker
-  (ii) DB::table('tableName')- ->insert(["name"=>"MD RAHATUL RABBI","email" =>"rahatul@gmail.com","password"=>bcrypt("rahatul")]);(For Insert values in the data table)
+  (ii) DB::table('tableName') ->insert(["name"=>"MD RAHATUL RABBI","email" =>"rahatul@gmail.com","password"=>bcrypt("rahatul")]);(For Insert values in the data table)
   (iii) DB::table('tableName') ->get(); (For Display)
   (iv) exit()
 ```
@@ -313,7 +321,7 @@ composer create-project laravel/laravel project-name
 2. For laravel php file use `.blade.php` extention. write code with `{{ }}`
 3. layout file name start with `_` line. Ex- `_master.blade.php`
 
-### 13 Code
+### 13. Code
 
 ---
 
@@ -339,7 +347,7 @@ composer create-project laravel/laravel project-name
 2. For `Insert/Show/Update/Edit/Delete` using Model
 
    - => Code: (For Display ) ----------------------------------------------
-     dd( $request- ->all() ); (For check data)
+     dd( $request ->all() ); (For check data)
 
    - -> Option -01
 
@@ -445,13 +453,13 @@ composer create-project laravel/laravel project-name
     'tableColumnName'  => $request ->name,
     'tableColumnName'  => $request ->description,
     ] );
-    return redirect()- ->route( 'folderName.fileName' );
+    return redirect() ->route( 'folderName.fileName' );
    ```
 
    - -> Option -03
 
    ```php
-    ModelName::where( 'id', $parameterName- ->id ) ->update( [
+    ModelName::where( 'id', $parameterName ->id ) ->update( [
     'tableColumnName'  => $request ->name,
     'tableColumnName'  => $request ->description,
     ] );
@@ -460,13 +468,13 @@ composer create-project laravel/laravel project-name
    - => Code: (For Delete data) ------------------------------------------------
 
    ```php
-    $parameterName- ->delete();
+    $parameterName ->delete();
    ```
 
 3. For `Insert/Show/Update/Edit/Delete` using DB
 
    - => Code: (For Display ) ----------------------------------------------
-     `dd( $request- ->all() );` (For check data)
+     `dd( $request ->all() );` (For check data)
    - -> Option -01
 
    ```php
@@ -583,7 +591,7 @@ composer create-project laravel/laravel project-name
     Form validation
 
     ```php
-    $request- ->validate( [
+    $request ->validate( [
     'inputName'  => 'required|max:255',
     'inputName'  => 'required',
     ], [
@@ -642,20 +650,20 @@ In the request class that place in the `app/http/Requests` initialized function 
   ```
   - -> Option -02
   ```php
-   @if (session()- ->has('success'))
-   {{ session()- ->get('success') }}
+   @if (session() ->has('success'))
+   {{ session() ->get('success') }}
    @endif
   ```
   - -> Option -03
   ```php
    @if (Session::has('success'))
-   {{ session()- ->get('success') }}
+   {{ session() ->get('success') }}
    @endif
   ```
   - -> Option -04 (For together print)
 
 ```php
-    @foreach ($errors- ->all() as $error )
+    @foreach ($errors ->all() as $error )
 <li>{{ $error }}</li>
 @endforeach
 ```
@@ -672,7 +680,7 @@ In the request class that place in the `app/http/Requests` initialized function 
 ### 17. Conditional statment and loop in Laravel
 
 - (i) @if ........@endif
-- (ii) @foreach (variableName that through in the Control file as $valiableName) -- $valiableName- ->keyName --- @endforeach
+- (ii) @foreach (variableName that through in the Control file as $valiableName) -- $valiableName ->keyName --- @endforeach
 
 ### 18. cache clear
 
@@ -768,7 +776,7 @@ In the request class that place in the `app/http/Requests` initialized function 
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/learnwithfair) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg' alt='facebook' height='40'>](https://www.facebook.com/learnwithfair/) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' height='40'>](https://www.instagram.com/learnwithfair/) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://www.twiter.com/learnwithfair/) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/youtube.svg' alt='YouTube' height='40'>](https://www.youtube.com/@learnwithfair)
 
-<!-- MARKDOWN LINKS & IMAGES -- ->
+ <!-- MARKDOWN LINKS & IMAGES  -->
 
 [youtube-shield]: https://img.shields.io/badge/-Youtube-black.svg?style=flat-square&logo=youtube&color=555&logoColor=white
 [youtube-url]: https://youtube.com/@learnwithfair
@@ -778,4 +786,3 @@ In the request class that place in the `app/http/Requests` initialized function 
 [instagram-url]: https://instagram.com/learnwithfair
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/company/learnwithfair
-````
