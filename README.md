@@ -34,6 +34,9 @@ Thanks for visiting my GitHub account!
 |                Laravel Framework                |                MVC Architecture                 |
 | ![roadmap](images/Laravel-Framework-banner.jpg) | ![roadmap](images/laravel-mvc-architecture.png) |
 
+## React with Laravel
+- https://skillhost.in/how-to-use-react-js-with-laravel/
+
 ## Create Laravel Project
 
 - Step-1: Run the command in the cmd
